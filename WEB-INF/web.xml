@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+   
+   <context-param>
+       <param-name>l1</param-name>
+       <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+   </context-param>
+   
+   <context-param>
+       <param-name>l2</param-name>
+       <param-value>jdbc:odbc:book_dsn</param-value>
+   </context-param>
+   <servlet>
+        <servlet-name>categoryselect</servlet-name>
+        <servlet-class>categoryselect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>bookselected</servlet-name>
+        <servlet-class>bookselected</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>delivery</servlet-name>
+        <servlet-class>delivery</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>validator</servlet-name>
+        <servlet-class>validator</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>bookchoosen</servlet-name>
+        <servlet-class>bookchoosen</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logoutservlet</servlet-name>
+        <servlet-class>logoutservlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>newuserservlet</servlet-name>
+        <servlet-class>newuserservlet</servlet-class>
+    </servlet>
+	
+	
+    <servlet-mapping>
+        <servlet-name>categoryselect</servlet-name>
+        <url-pattern>/categoryselect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bookselected</servlet-name>
+        <url-pattern>/bookselected</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>delivery</servlet-name>
+        <url-pattern>/delivery</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validator</servlet-name>
+        <url-pattern>/validator</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bookchoosen</servlet-name>
+        <url-pattern>/bookchoosen</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutservlet</servlet-name>
+        <url-pattern>/logoutservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>newuserservlet</servlet-name>
+		<url-pattern>/newuserservlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        </welcome-file-list>
+    </web-app>
